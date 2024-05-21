@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Convite para Filminho</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+    }
+    #question {
+        font-size: 24px;
+        text-align: center;
+    }
+    #buttons {
+        margin-top: 20px;
+        position: relative;
+    }
+    #yes, #no {
+        font-size: 18px;
+        padding: 10px 20px;
+        margin: 0 10px;
+    }
+    #no {
+        position: absolute;
+        animation: moveButton 5s infinite alternate;
+    }
+    #message {
+        margin-top: 20px;
+        font-size: 20px;
+        text-align: center;
+        display: none;
+    }
+    
+    @keyframes moveButton {
+        from {
+            left: 0;
+        }
+        to {
+            left: 90%;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div id="question">
+    Filminho comigo hoje?
+</div>
+
+<div id="buttons">
+    <button id="yes" onclick="showMessage()">Sim</button>
+    <button id="no" onclick="moveButton()">Não</button>
+</div>
+
+<div id="message">
+    Te espero lá em casa às 20h
+    <pre>
+    _______0000000000000_______000000000000________
+    _____000000000000000000__00000000000000000______
+    ___00000000000000000000000000000_______0000_____
+    __000000000000000000000000000000_________000____
+    _000000000000000000000000000000000________000___
+    _000000000000000000000000000000000000_____000____
+    00000000000000000000000000000000000000___0000____
+    000000000000000000000000000000000000000_00000____
+    000000000000000000000000000000000000000000000____
+    000000000000000000000000000000000000000000000
+     000000000000000000000000000000000000000000_! ____
+    __00000000000000000000000000000000000000000______
+   ____00000000000000000000000000000000000000_______
+   ______0000000000000000000000000000000000________
+   _________00000000000000000000000000000__________
+ ____________000000000000000000000000___________
+_  ______________000000000000000000_____________
+__________________00000000000000_____________
+____________________000000000________________
+______________________00000_________________
+_______________________00___________________
+</pre>
+</div>
+
+<script>
+    function moveButton() {
+        alert("Você escolheu Não, tente clicar de novo!");
+    }
+    
+    function showMessage() {
+        document.getElementById("message").style.display = "block";
+    }
+</script>
+
+</body>
+</html>
+
